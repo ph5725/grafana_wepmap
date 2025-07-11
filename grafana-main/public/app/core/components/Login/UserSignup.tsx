@@ -11,7 +11,7 @@ export const UserSignup = () => {
   return (
     <Stack direction="column">
       <div className={paddingTop}>
-        <Trans i18nKey="login.signup.new-to-question">New to Grafana?</Trans>
+        <Trans i18nKey="login.dangky.new-to-question">Bạn chưa có tài khoản?</Trans>
       </div>
       <LinkButton
         className={css({
@@ -22,7 +22,7 @@ export const UserSignup = () => {
         variant="secondary"
         fill="outline"
       >
-        <Trans i18nKey="login.signup.button-label">Sign up</Trans>
+        <Trans i18nKey="login.dangky.button-label">Đăng ký</Trans>
       </LinkButton>
     </Stack>
   );

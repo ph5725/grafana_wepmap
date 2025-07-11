@@ -33,29 +33,29 @@ export const LoginForm = ({ children, onSubmit, isLoggingIn, passwordHint, login
     <div className={styles.wrapper}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Field
-          label={t('login.form.username-label', 'Email or username')}
+          label={t('login.form.tendangnhap-label', 'Tên đăng nhập')}
           invalid={!!errors.user}
           error={errors.user?.message}
         >
           <Input
-            {...register('user', { required: t('login.form.username-required', 'Email or username is required') })}
+            {...register('user', { required: t('login.form.tendangnhap-required', 'Bắt buộc phải nhập tên đăng nhập') })}
             id={usernameId}
             autoFocus
             autoCapitalize="none"
-            placeholder={loginHint || t('login.form.username-placeholder', 'email or username')}
+            placeholder={loginHint || t('login.form.tendangnhap-placeholder', 'Nhập tên đăng nhập')}
             data-testid={selectors.pages.Login.username}
           />
         </Field>
         <Field
-          label={t('login.form.password-label', 'Password')}
+          label={t('login.form.matkhau-label', 'Mật khẩu')}
           invalid={!!errors.password}
           error={errors.password?.message}
         >
           <PasswordField
-            {...register('password', { required: t('login.form.password-required', 'Password is required') })}
+            {...register('password', { required: t('login.form.matkhau-required', 'Bắt buộc phải nhập mật khẩu') })}
             id={passwordId}
             autoComplete="current-password"
-            placeholder={passwordHint || t('login.form.password-placeholder', 'password')}
+            placeholder={passwordHint || t('login.form.matkhau-placeholder', 'Nhập mật khẩu')}
           />
         </Field>
         <Button
@@ -64,7 +64,7 @@ export const LoginForm = ({ children, onSubmit, isLoggingIn, passwordHint, login
           className={styles.submitButton}
           disabled={isLoggingIn}
         >
-          {isLoggingIn ? t('login.form.submit-loading-label', 'Logging in...') : t('login.form.submit-label', 'Log in')}
+          {isLoggingIn ? t('login.form.cho-dangnhap-label', 'Đang đăng nhập...') : t('login.form.dangnhap-label', 'Đăng nhập')}
         </Button>
         {children}
       </form>
