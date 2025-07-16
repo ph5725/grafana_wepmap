@@ -1,5 +1,5 @@
 # Vào đúng thư mục để cấu hình
-cd grafana-wepmap   
+cd grafana_wepmap   
 cd grafana-main
 
 # Cấu hình
